@@ -1,25 +1,31 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import styled from 'styled-components'
+
+import Header from './components/header.component'
+import TodoList from './components/todo-list.component'
+
+const ContainerBody = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const ContainerApp = styled.div`
+  width: 100vw;
+  max-width: 50rem;
+  height: 100vh;
+  border: 1px solid grey;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContainerBody>
+      <ContainerApp>
+        <Header />
+        <TodoList />
+      </ContainerApp>
+    </ContainerBody>
   );
 }
 

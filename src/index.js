@@ -4,9 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import { TodosProvider } from './context/todos.context'
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TodosProvider>
+      <App />
+    </TodosProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
